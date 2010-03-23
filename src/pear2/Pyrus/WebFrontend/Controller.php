@@ -28,6 +28,7 @@ class Controller
 {
     public $view_map = array(
         'index'         => 'pear2\Pyrus\WebFrontend\Index',
+        'discoverchannel' => 'pear2\Pyrus\WebFrontend\DiscoverChannel',
         'list_channels' => 'pear2\Pyrus\WebFrontend\ListChannels',
         'list_packages' => 'pear2\Pyrus\WebFrontend\ListPackages',
         'install'       => 'pear2\Pyrus\WebFrontend\InstallPackage'
