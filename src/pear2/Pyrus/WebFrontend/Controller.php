@@ -28,7 +28,8 @@ class Controller
 {
     public $view_map = array(
         'index'         => 'pear2\Pyrus\WebFrontend\Index',
-        'list_packages' => 'pear2\Pyrus\WebFrontend\ListPackages'
+        'list_packages' => 'pear2\Pyrus\WebFrontend\ListPackages',
+        'install'       => 'pear2\Pyrus\WebFrontend\InstallPackage'
     );
     
     public $options = array('view'=>'index');
@@ -46,21 +47,20 @@ class Controller
         if (!empty($_POST)) {
             try {
                 $this->handlePost();
-            } catch(Exception $e) {
+            } catch(\Exception $e) {
                 $this->actionable[] = $e;
             }
         }
 
         try {
             $this->run();
-        } catch(Exception $e) {
+        } catch(\Exception $e) {
             $this->actionable[] = $e;
         }
     }
     
     function handlePost()
     {
-        $this->filterPostValues();
         switch($_POST['_type']) {
             case '':
                 break;

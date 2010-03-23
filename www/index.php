@@ -12,12 +12,12 @@ spl_autoload_register("PEAR2_Pyrus_WebFrontend_autoload");
 
 set_include_path(dirname(__DIR__).'/src');
 
-pear2\Pyrus\WebFrontend\Controller::setConfigDir('/Users/bbieber/pyrus');
+pear2\Pyrus\WebFrontend\Controller::setConfigDir('/tmp/pyrustest');
 $controller = new pear2\Pyrus\WebFrontend\Controller($_GET);
 
-pear2\Templates\Savant\ClassToTemplateMapper::$classname_replacement = 'pear2\Pyrus\\';
 
 $savant = new pear2\Templates\Savant\Main();
+$savant->setClassToTemplateMapper(new pear2\Pyrus\WebFrontend\ClassToTemplateMapper);
 $savant->setTemplatePath(__DIR__.'/templates');
 $savant->setEscape('htmlspecialchars');
 $savant->setFilters(array($controller, 'postRender'));
