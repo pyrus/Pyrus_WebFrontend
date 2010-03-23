@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', true);
 
-require_once '/Users/bbieber/workspace/PEAR2/autoload.php';
+require_once dirname(__DIR__).'/../../autoload.php';
 
 function PEAR2_Pyrus_WebFrontend_autoload($class)
 {
