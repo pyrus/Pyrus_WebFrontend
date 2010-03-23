@@ -9,6 +9,7 @@
         <li><a href="?view=list_channels">List Channels</a></li>
         <li><a href="?view=install">Install/Upgrade</a></li>
         <li><a href="?view=discoverchannel">Add Channel</a></li>
+        <li><a href="?view=config">Edit Configuration</a></li>
     </ul>
     <?php echo $savant->render($context->actionable); ?>
 </body>
