@@ -85,7 +85,7 @@ class Controller
          if (isset($this->view_map[$this->options['view']])) {
              $this->actionable[] = new $this->view_map[$this->options['view']]($this->options);
          } else {
-             throw new Exception('Un-registered view');
+             throw new UnregisteredViewException('Un-registered view');
          }
     }
     
