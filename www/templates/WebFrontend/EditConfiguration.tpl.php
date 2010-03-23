@@ -1,51 +1,33 @@
+<?php $parent->context->page_title = 'Edit Configuration'; ?>
 <h2>Edit Configuration</h2>
 <form method="post" action="?view=config">
+    <input type="hidden" name="_type" value="config" />
+    <?php
+    $non_editable = array('php_dir', 'data_dir');
+    $sections = array(
+        'mainsystemvars'    => 'System Paths:',
+        'customsystemvars'  => 'Custom System paths:',
+        'mainuservars'      => 'User config (from '.$context->userfile.'):',
+        'mainchannelvars'   => '(variables specific to '.$context->default_channel.'):',
+        'customuservars'    => 'Custom User config (from '.$context->userfile.'):',
+        'customchannelvars' => '(variables specific to '.$context->default_channel.'):'
+        );
+    foreach ($sections as $section=>$legend) :
+    ?>
     <fieldset>
-        <legend>System paths:</legend>
+        <legend><?php echo $legend; ?></legend>
         <?php
-        foreach ($context->mainsystemvars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
+        foreach ($context->$section as $var) {
+            echo "<label>$var:</label>";
+            if (!in_array($var, $non_editable)) {
+                echo "<input name=\"config[$var]\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
+            } else {
+                echo $context->$var.'<br />';
+            }
         }
         ?>
     </fieldset>
-    <fieldset>
-        <legend>Custom System paths:</legend>
-        <?php
-        foreach ($context->customsystemvars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
-        }
-        ?>
-    </fieldset>
-    <fieldset>
-        <legend>User config (from <?php echo $context->userfile; ?>):</legend>
-        <?php
-        foreach ($context->mainuservars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
-        }
-        ?>
-    </fieldset>
-    <fieldset>
-        <legend>(variables specific to <?php echo $context->default_channel; ?>):</legend>
-        <?php
-        foreach ($context->mainchannelvars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
-        }
-        ?>
-    </fieldset>
-    <fieldset>
-        <legend>Custom User config (from <?php echo $context->userfile; ?>):</legend>
-        <?php
-        foreach ($context->customuservars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
-        }
-        ?>
-    </fieldset>
-    <fieldset>
-        <legend>(variables specific to <?php echo $context->default_channel; ?>):</legend>
-        <?php
-        foreach ($context->customchannelvars as $var) {
-            echo "<label>$var:</label><input name=\"$var\" type=\"text\" value=\"{$context->$var}\" /><br />\n";
-        }
-        ?>
-    </fieldset>
+    <?php endforeach; ?>
+
+    <input type="submit" value="Submit" />
 </form>
