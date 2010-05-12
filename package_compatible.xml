@@ -28,7 +28,7 @@ Package detailed description here (found in README)</description>
 Package PEAR2_Pyrus_WebFrontend API release notes for version 0.1.0.</notes>
  <contents>
   <dir name="/">
-   <file role="php" name="php/pear2/Pyrus/WebFrontend/Main.php"/>
+   <file role="php" name="php/PEAR2/Pyrus/WebFrontend/Main.php"/>
   </dir>
  </contents>
  <dependencies>
@@ -43,7 +43,7 @@ Package PEAR2_Pyrus_WebFrontend API release notes for version 0.1.0.</notes>
  </dependencies>
  <phprelease>
   <filelist>
-   <install name="php/pear2/Pyrus/WebFrontend/Main.php" as="pear2/Pyrus/WebFrontend/Main.php"/>
+   <install name="php/PEAR2/Pyrus/WebFrontend/Main.php" as="PEAR2/Pyrus/WebFrontend/Main.php"/>
   </filelist>
  </phprelease>
 </package>

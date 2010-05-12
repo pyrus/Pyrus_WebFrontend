@@ -1,10 +1,10 @@
 <?php
-namespace pear2\Pyrus\WebFrontend;
-class ClassToTemplateMapper extends \pear2\Templates\Savant\ClassToTemplateMapper
+namespace PEAR2\Pyrus\WebFrontend;
+class ClassToTemplateMapper extends \PEAR2\Templates\Savant\ClassToTemplateMapper
 {
     function __construct($options = array())
     {
-        static::$classname_replacement = 'pear2\Pyrus\\';
+        static::$classname_replacement = 'PEAR2\Pyrus\\';
     }
     
     function map($class)

@@ -1,6 +1,6 @@
 <?php
 /**
- * pear2\Pyrus\WebFrontend\Controller
+ * PEAR2\Pyrus\WebFrontend\Controller
  *
  * PHP version 5
  *
@@ -23,16 +23,16 @@
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @link      http://svn.php.net/repository/pear2/PEAR2_Pyrus_WebFrontend
  */
-namespace pear2\Pyrus\WebFrontend;
+namespace PEAR2\Pyrus\WebFrontend;
 class Controller
 {
     public $view_map = array(
-        'index'         => 'pear2\Pyrus\WebFrontend\Index',
-        'config'         => 'pear2\Pyrus\WebFrontend\EditConfiguration',
-        'discoverchannel' => 'pear2\Pyrus\WebFrontend\DiscoverChannel',
-        'list_channels' => 'pear2\Pyrus\WebFrontend\ListChannels',
-        'list_packages' => 'pear2\Pyrus\WebFrontend\ListPackages',
-        'install'       => 'pear2\Pyrus\WebFrontend\InstallPackage'
+        'index'         => 'PEAR2\Pyrus\WebFrontend\Index',
+        'config'         => 'PEAR2\Pyrus\WebFrontend\EditConfiguration',
+        'discoverchannel' => 'PEAR2\Pyrus\WebFrontend\DiscoverChannel',
+        'list_channels' => 'PEAR2\Pyrus\WebFrontend\ListChannels',
+        'list_packages' => 'PEAR2\Pyrus\WebFrontend\ListPackages',
+        'install'       => 'PEAR2\Pyrus\WebFrontend\InstallPackage'
     );
     
     public $options = array('view'=>'index');
@@ -72,13 +72,13 @@ class Controller
     
     static function setConfigDir($dir)
     {
-        self::$config = \pear2\Pyrus\Config::singleton($dir);
+        self::$config = \PEAR2\Pyrus\Config::singleton($dir);
     }
     
     static function getConfig()
     {
         if (!isset(self::$config)) {
-            return \pear2\Pyrus\Config::current();
+            return \PEAR2\Pyrus\Config::current();
         }
         return self::$config;
     }
