@@ -4,7 +4,7 @@ class DiscoverChannel
 {
     function __construct($options = array())
     {
-        if (isset($_POST)) {
+        if (!empty($_POST)) {
             $this->handlePost();
         }
     }

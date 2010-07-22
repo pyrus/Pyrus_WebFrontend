@@ -7,7 +7,7 @@ class EditConfiguration
     function __construct($options = array())
     {
         $this->config = Controller::getConfig();
-        if (isset($_POST)) {
+        if (!empty($_POST)) {
             $this->handlePost();
         }
     }

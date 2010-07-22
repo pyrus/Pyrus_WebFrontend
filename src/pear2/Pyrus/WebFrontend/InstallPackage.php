@@ -4,7 +4,7 @@ class InstallPackage
 {
     function __construct($options)
     {
-        if (isset($_POST)) {
+        if (!empty($_POST)) {
             $this->handlePost();
         }
     }
