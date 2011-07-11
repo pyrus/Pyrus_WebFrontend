@@ -1,5 +1,5 @@
 <?php
-namespace PEAR2\Pyrus\WebFrontend;
+namespace Pyrus\WebFrontend;
 class ListChannels extends \ArrayIterator
 {
     function __construct($options = array())

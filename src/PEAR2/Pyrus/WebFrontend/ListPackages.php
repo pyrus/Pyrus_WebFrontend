@@ -1,5 +1,5 @@
 <?php
-namespace PEAR2\Pyrus\WebFrontend;
+namespace Pyrus\WebFrontend;
 class ListPackages extends \ArrayIterator
 {
     function __construct($options = array())

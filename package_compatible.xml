@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <package version="2.1" xmlns="http://pear.php.net/dtd/package-2.1" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.1     http://pear.php.net/dtd/package-2.1.xsd">
- <name>PEAR2_Pyrus_WebFrontend</name>
+ <name>Pyrus_WebFrontend</name>
  <channel>pear2.php.net</channel>
- <summary>Package PEAR2_Pyrus_WebFrontend summary.
+ <summary>Package Pyrus_WebFrontend summary.
 </summary>
  <description>
 Package detailed description here (found in README)</description>
@@ -23,12 +23,12 @@ Package detailed description here (found in README)</description>
   <api>alpha</api>
  </stability>
  <license uri="http://www.opensource.org/licenses/bsd-license.php">New BSD License</license>
- <notes>Package PEAR2_Pyrus_WebFrontend release notes for version 0.1.0.
+ <notes>Package Pyrus_WebFrontend release notes for version 0.1.0.
 
-Package PEAR2_Pyrus_WebFrontend API release notes for version 0.1.0.</notes>
+Package Pyrus_WebFrontend API release notes for version 0.1.0.</notes>
  <contents>
   <dir name="/">
-   <file role="php" name="php/PEAR2/Pyrus/WebFrontend/Main.php"/>
+   <file role="php" name="php/Pyrus/WebFrontend/Main.php"/>
   </dir>
  </contents>
  <dependencies>
@@ -43,7 +43,7 @@ Package PEAR2_Pyrus_WebFrontend API release notes for version 0.1.0.</notes>
  </dependencies>
  <phprelease>
   <filelist>
-   <install name="php/PEAR2/Pyrus/WebFrontend/Main.php" as="PEAR2/Pyrus/WebFrontend/Main.php"/>
+   <install name="php/Pyrus/WebFrontend/Main.php" as="Pyrus/WebFrontend/Main.php"/>
   </filelist>
  </phprelease>
 </package>

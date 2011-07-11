@@ -1,5 +1,5 @@
 <?php
-namespace PEAR2\Pyrus\WebFrontend;
+namespace Pyrus\WebFrontend;
 class InstallPackage
 {
     function __construct($options)
@@ -23,13 +23,13 @@ class InstallPackage
     
     function install($name)
     {
-        $package = new \PEAR2\Pyrus\Package($name);
+        $package = new \Pyrus\Package($name);
         try {
-            \PEAR2\Pyrus\Installer::begin();
-            \PEAR2\Pyrus\Installer::prepare($package);
-            \PEAR2\Pyrus\Installer::commit();
+            \Pyrus\Installer::begin();
+            \Pyrus\Installer::prepare($package);
+            \Pyrus\Installer::commit();
         } catch (Exception $e) {
-            \PEAR2\Pyrus\Installer::rollback();
+            \Pyrus\Installer::rollback();
             throw new \Exception('Unable to install '.$name, $e);
         }
     }

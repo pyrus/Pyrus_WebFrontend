@@ -1,5 +1,5 @@
 <?php
-namespace PEAR2\Pyrus\WebFrontend;
+namespace Pyrus\WebFrontend;
 class Index
 {
     function __construct($options = array())

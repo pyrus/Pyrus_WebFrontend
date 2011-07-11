@@ -1,38 +1,38 @@
 <?php
 /**
- * PEAR2\Pyrus\WebFrontend\Controller
+ * Pyrus\WebFrontend\Controller
  *
  * PHP version 5
  *
  * @category  Yourcategory
- * @package   PEAR2_Pyrus_WebFrontend
+ * @package   Pyrus_WebFrontend
  * @author    Your Name <handle@php.net>
  * @copyright 2010 Your Name
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
  * @version   SVN: $Id$
- * @link      http://svn.php.net/repository/pear2/PEAR2_Pyrus_WebFrontend
+ * @link      https://github.com/pyrus/Pyrus_WebFrontend
  */
 
 /**
- * Controller class for PEAR2_Pyrus_WebFrontend
+ * Controller class for Pyrus_WebFrontend
  *
  * @category  Yourcategory
- * @package   PEAR2_Pyrus_WebFrontend
+ * @package   Pyrus_WebFrontend
  * @author    Your Name <handle@php.net>
  * @copyright 2010 Your Name
  * @license   http://www.opensource.org/licenses/bsd-license.php New BSD License
- * @link      http://svn.php.net/repository/pear2/PEAR2_Pyrus_WebFrontend
+ * @link      https://github.com/pyrus/Pyrus_WebFrontend
  */
-namespace PEAR2\Pyrus\WebFrontend;
+namespace Pyrus\WebFrontend;
 class Controller
 {
     public $view_map = array(
-        'index'         => 'PEAR2\Pyrus\WebFrontend\Index',
-        'config'         => 'PEAR2\Pyrus\WebFrontend\EditConfiguration',
-        'discoverchannel' => 'PEAR2\Pyrus\WebFrontend\DiscoverChannel',
-        'list_channels' => 'PEAR2\Pyrus\WebFrontend\ListChannels',
-        'list_packages' => 'PEAR2\Pyrus\WebFrontend\ListPackages',
-        'install'       => 'PEAR2\Pyrus\WebFrontend\InstallPackage'
+        'index'         => 'Pyrus\WebFrontend\Index',
+        'config'         => 'Pyrus\WebFrontend\EditConfiguration',
+        'discoverchannel' => 'Pyrus\WebFrontend\DiscoverChannel',
+        'list_channels' => 'Pyrus\WebFrontend\ListChannels',
+        'list_packages' => 'Pyrus\WebFrontend\ListPackages',
+        'install'       => 'Pyrus\WebFrontend\InstallPackage'
     );
     
     public $options = array('view'=>'index');
@@ -72,13 +72,13 @@ class Controller
     
     static function setConfigDir($dir)
     {
-        self::$config = \PEAR2\Pyrus\Config::singleton($dir);
+        self::$config = \Pyrus\Config::singleton($dir);
     }
     
     static function getConfig()
     {
         if (!isset(self::$config)) {
-            return \PEAR2\Pyrus\Config::current();
+            return \Pyrus\Config::current();
         }
         return self::$config;
     }
